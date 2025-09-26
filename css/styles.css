@@ -19,7 +19,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  padding: 30px 16px;
+  padding: 30px 90px;
 }
 
 .footer-company,
@@ -30,6 +30,10 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.footer-location {
+  gap: -10px;
 }
 
 .footer ul {
@@ -43,7 +47,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:22px 48px;
+  padding:10px 10px;
   background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
   position:sticky;top:0;
   backdrop-filter: blur(4px);
@@ -118,7 +122,8 @@ nav a:hover{
   padding:48px;
   min-height:520px;
   position:relative;
-  overflow:hidden
+  overflow:hidden;
+  background-image: url(./assets/bg/background-top.svg);
 }
 .hero-left{
   flex:1;padding:32px 12px;
@@ -184,7 +189,7 @@ nav a:hover{
 }
 
 .logo-bubble.small{
-  width:56px;
+  width: 10px;
   height:56px
 }
 
@@ -229,8 +234,8 @@ nav a:hover{
 /* Base style for all bubbles */
 .logo-bubble {
   position: absolute;
-  width: 78px;
-  height: 78px;
+  width: 250px;
+  height: 250px;
   border-radius: 999px;
   background: white;
   display: flex;
@@ -241,13 +246,11 @@ nav a:hover{
 }
 
 .logo-bubble.small {
-  width: 56px;
-  height: 56px;
+  width: 200px;
+  height: 200px;
 }
 
 .logo-bubble img {
-  width: 230%;
-  height: 230%;
   object-fit: contain;
 }
 
@@ -267,13 +270,13 @@ nav a:hover{
 }
 
 /* New, more spread-out final positions */
-.b1 { right: 110%; top: 50%; }
-.b2 { right: 110%; top: 1%; }
-.b3 { right: 80%;  top: 20%; }
+.b1 { right: 1%; top: 40%; }
+.b2 { right: 20%; top: 0%; }
+.b3 { right: 30%;  top: 30%; }
 .b4 { right: 20%; top: 40%; }
-.b5 { right: 10%; top: 1%; }
-.b6 { right: 50%; top: 60%; }
-.b7 { right: 1%; top: 10%; }
+.b5 { right: 10%; top: -10%; }
+.b6 { right: 50%; top: -40%; }
+.b7 { right: 40%; top: 10%; }
 
 /* Staggered animation delays for a nice effect */
 .hero.loaded .b2 { transition-delay: 1s; }
@@ -312,8 +315,8 @@ main{background:transparent}
 }
 
 .feature .dot{
-  width:22px;
-  height:22px;
+  width: 50px;
+  height: 50px;
   border-radius:999px;
   margin:0 auto 14px;
   background:linear-gradient(180deg,#eef6ff,#f8fbff);
@@ -323,7 +326,163 @@ main{background:transparent}
   border:4px solid rgba(47,120,255,0.07)
 }
 
-.feature p{font-weight:600;color:#333;margin-top:8px}
+.feature p{
+  font-weight:600;
+  color:#333;
+  margin-top:8px;
+}
+
+/* Using a common font */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa; /* A light background to see the card */
+  color: #555;
+}
+
+/* ----- Main Pricing Section ----- */
+.pricing-section {
+  max-width: 1140px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-header h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Wrapper for the 2-column layout */
+.pricing-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Adjust ratio as needed */
+  gap: 40px;
+  align-items: center;
+}
+
+/* ----- Left Pricing Card ----- */
+.pricing-card-left {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.pricing-card-left .price {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.pricing-card-left .price span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #888;
+}
+
+.pricing-card-left hr {
+  border: 0;
+  height: 1px;
+  background-color: #eee;
+  margin: 1.5rem 0;
+}
+
+.pricing-card-left .description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.pricing-card-left .btn-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #2962FF;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px; /* Pill shape */
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.pricing-card-left .btn-play:hover {
+  background-color: #0039cb;
+}
+
+.pricing-card-left .btn-play svg {
+  color: white; /* Make the SVG color inherit */
+}
+
+.pricing-card-left .no-credit-card {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+
+/* ----- Right Features Grid ----- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns icon and text to the top */
+  gap: 1rem;
+  text-align: left;
+}
+
+.Image-icon img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;;
+} 
+
+/* Add background images or SVGs for your actual icons */
+/* .components-icon { background-image: url('path/to/icon.svg'); } */
+
+.feature-text h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #666;
+  gap: 15px;
+}
+
+.badge {
+  background-color: #00c853;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
 
 /* ----- Hire Us ----- */
 .hire-us {
@@ -356,9 +515,10 @@ main{background:transparent}
 }
 
 .hire-header h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: white
 }
 
 .hire-header p {
@@ -378,6 +538,7 @@ main{background:transparent}
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 30px;
+  color: white
 }
 
 .author {
@@ -387,8 +548,8 @@ main{background:transparent}
 }
 
 .author img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -396,6 +557,7 @@ main{background:transparent}
 .author-info h3 {
   font-weight: bold;
   margin: 0;
+  color: white
 }
 
 .author-info p {
@@ -424,7 +586,7 @@ textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: none;
+  border: 1px solid #232323;
   border-radius: 6px;
 }
 
@@ -528,7 +690,7 @@ textarea {
 }
 
 /* ----- Responsive ----- */
-@media (max-width:980px){
+@media (min-width:1024px){
   .hero{flex-direction:
     column;padding:28px 18px;
     min-height:620px
@@ -553,9 +715,259 @@ textarea {
     padding:14px 18px
   }
 }
-@media (max-width:560px){
-  .hero-left h1{font-size:28px}
-  .logos{display:none}
-  nav{display:none}
+@media (max-width:1023px) and (min-width:768px){
+  .header-right{
+    display: none;
+  }
+
+  .diagonal{
+    right:-40%;
+    width:140%;
+    transform:skewX(-12deg)
+}
+
+  .hero{
+    display:block;
+    padding:28px 18px;
+    min-height:620px;
+    flex-direction: column;
+    text-align:center
+  }
+
+  .hero-left{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    max-width:100%;
+    padding:0 12px
+  }
+
+  nav{
+    display:flex;
+  }
+
+  .trigram {
+    display:none;
+  }
+
+  .logo{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: fit-content;
+    gap: 50px;
+  }
+
   .cta{padding:8px 12px;font-size:14px}
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.pricing-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.pricing-card-left {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-grid {
+  display: none;
+}
+
+@media (max-width:1023px) and (min-width:768px){
+  /* Existing hero rules stay as they are... */
+
+  /* --- Hire Us section --- */
+  .hire-content {
+    flex-direction: column; /* stack left + right */
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hire-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* text left, author right */
+  align-items: flex-start;
+  gap: 20px;
+  padding: 70px;
+}
+
+.hire-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonial {
+  flex: 1; /* take available space */
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: 250px;
+}
+
+.author img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info h3 {
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.author-info p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  gap: 30px;
+  max-width: fit-content;
+
+}
+
+.footer-location {
+  display: flexbox;
+  flex-direction: column;
+}
+.footer-source-information {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: flex-start;
+}
+}
+@media (max-width:767px) and (min-width:360px){
+  .header-right{
+    display: none;
+  }
+
+  .header-left{
+    display:flex;
+    justify-content: flex-start;
+    justify-content:space-between;
+    width:100%
+  }
+
+  .hero {
+    max-width: fit-content;
+  }
+
+  .eyebrow{
+    display: none;
+  }
+  
+  .hero{
+    display:block;
+    padding:28px 18px;
+    min-height:620px;
+    flex-direction: column;
+    text-align:center
+  }
+
+  .hero-right{
+    width:100%;
+    min-width:0;height:340px
+  }
+
+  .diagonal{
+    right:-40%;
+    width:140%;
+    transform:skewX(-12deg)
+  }
+
+  .hero-left{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    max-width:100%;
+    padding:0 12px
+  }
+
+  nav{
+    display:none;
+  }
+
+  .trigram {
+    display:block;
+  }
+
+  .logo{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: fit-content;
+    gap: 50px;
+  }
+
+  .cta{
+    padding:8px 12px;
+    font-size:14px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: fit-content;
+  }
+
+  .features{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: fit-content;
+  }
+
+  .feature{
+    display: flex;
+    justify-items: flex-start;
+    max-width: fit-content;
+  }
+
+  .pricing-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
 }
